@@ -17,8 +17,8 @@ class HotelRemoteDataSourceImpl implements HotelRemoteDataSource {
     final Map<String, String> parameters = {
       "engine": "google_hotels",
       "q": "Bali Resorts",
-      "check_in_date": "2024-12-16",
-      "check_out_date": "2024-12-17",
+      "check_in_date": "2025-12-16",
+      "check_out_date": "2025-12-17",
       "adults": "2",
       "currency": "USD",
       "gl": "us",
