@@ -8,6 +8,9 @@
   - **Hotels**
   - **Favorites**
   - **Account**
+<img width="993" alt="Screenshot 2024-12-15 at 06 25 05" src="https://github.com/user-attachments/assets/526e70e7-35fd-450d-85b9-6e8134bacc2b" />
+
+
 
 ### Hotels Tab
 - Fetch and display a list of hotels using a serpAPI.
@@ -42,4 +45,7 @@ The app follows the **Clean Architecture** pattern and is divided into three mai
 - Converts raw data into domain entities.
 
 <img width="373" alt="Screenshot 2024-12-15 at 03 14 43" src="https://github.com/user-attachments/assets/1c45f2d7-e06e-4104-a552-0930708b1587" />
+
+
+
 
