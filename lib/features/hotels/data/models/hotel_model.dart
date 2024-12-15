@@ -7,7 +7,7 @@ class HotelModel extends Hotel {
     required double rating,
     String? image,
     required String link,
-    String? description, // Add description
+    String? description,
   }) : super(
     name: name,
     price: price,
@@ -20,22 +20,22 @@ class HotelModel extends Hotel {
   factory HotelModel.fromJson(Map<String, dynamic> json) {
     return HotelModel(
       name: json['name'] ?? 'Unknown Hotel',
-      price: (json['rate_per_night']?['extracted_lowest'] ?? 0).toDouble(),
-      rating: json['overall_rating'] ?? 0.0,
-      image: (json['images']?.isNotEmpty ?? false) ? json['images'][0]['thumbnail'] : null,
-      link: json['link'] ?? '',
-      description: json['description'] ?? 'No description available', // Map description
+      price: (json['rate_per_night']?['extracted_lowest'] ?? 0).toDouble(), // Extract nested price
+      rating: json['overall_rating'] ?? 0.0, // Extract rating
+      image: (json['images']?.isNotEmpty ?? false) ? json['images'][0]['thumbnail'] : null, // Extract first image
+      link: json['link'] ?? '', // Extract link
+      description: json['description'] ?? 'No description available', // Extract description
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'name': name,
-      'price': price,
-      'rating': rating,
-      'image': image,
-      'link': link,
-      'description': description, // Serialize description
+      'rate_per_night': {'extracted_lowest': price}, // Store price as nested structure
+      'overall_rating': rating, // Store rating
+      'images': image != null ? [{'thumbnail': image}] : [], // Store image as list of maps
+      'link': link, // Store link
+      'description': description, // Store description
     };
   }
 }

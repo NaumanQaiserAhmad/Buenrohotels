@@ -20,11 +20,18 @@ class FavoritesScreen extends StatelessWidget {
 
         if (snapshot.hasData && snapshot.data!.isNotEmpty) {
           final favoriteHotels = snapshot.data!;
+          // Log the list of favorite hotels
+          for (var hotel in favoriteHotels) {
+            print('Favorite Hotel: ${hotel.name}, Price: ${hotel.price}, Rating: ${hotel.rating}, Description: ${hotel.description}, Image: ${hotel.image}');
+          }
           return ListView.builder(
             itemCount: favoriteHotels.length,
             itemBuilder: (context, index) {
+              final hotel = favoriteHotels[index];
+              print(
+                  'Favorite Hotel Passed to HotelCard: Name: ${hotel.name}, Price: ${hotel.price}, Rating: ${hotel.rating}, Description: ${hotel.description}, Image: ${hotel.image}');
               return HotelCard(
-                hotel: favoriteHotels[index],
+                hotel: hotel,
                 isFavorite: true,
               );
             },
