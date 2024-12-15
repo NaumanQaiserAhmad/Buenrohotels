@@ -22,7 +22,7 @@ class HotelRemoteDataSourceImpl implements HotelRemoteDataSource {
       "adults": "2",
       "currency": "USD",
       "gl": "us",
-      "hl": "es",
+      "hl": "en",
       "api_key": "4fe05815942694184c2bc31f0ec93a49d2ed4ffb5ffede8d7582932f610f2132"
     };
 
