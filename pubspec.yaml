@@ -1,0 +1,32 @@
+name: hotel_booking_app
+description: A Flutter app for hotel bookings using Material Design and clean architecture.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.0.0 # For API calls
+  flutter_bloc: ^8.1.0 # For state management
+  equatable: ^2.0.5 # For comparing states/events
+  dartz: ^0.10.1 # For functional programming
+  shared_preferences: ^2.2.0 # For local storage
+  cached_network_image: ^3.2.3 # For efficient image loading
+  google_fonts: ^6.2.1 # For Material 3 fonts
+  material_color_utilities: ^0.11.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.3.3 # For code generation
+  bloc_test: ^9.1.0 # For testing Bloc logic
+  mockito: ^5.4.2 # For mocking dependencies in tests
+  flutter_lints: ^4.0.0 # For lint rules and best practices
+
+flutter:
+  uses-material-design: true
+
