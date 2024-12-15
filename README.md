@@ -1,16 +1,45 @@
-# bunerohotels
+# Project Name: Buenrohotels
 
-A new Flutter project.
+## Features
 
-## Getting Started
+### Bottom Navigation Bar
+- Navigate between four tabs:
+  - **Overview**
+  - **Hotels**
+  - **Favorites**
+  - **Account**
 
-This project is a starting point for a Flutter application.
+### Hotels Tab
+- Fetch and display a list of hotels using a serpAPI.
+- Show hotel details such as:
+  - Hotel name
+  - Price
+  - Description
+  - Option to mark as favorite.
 
-A few resources to get you started if this is your first Flutter project:
+### Favorites Tab
+- Display the list of favorited hotels stored locally.
+- Allow users to remove hotels from favorites.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Error Handling
+- Display error messages when API calls fail.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Architecture
+The app follows the **Clean Architecture** pattern and is divided into three main layers:
+
+### 1. Presentation Layer
+- Contains UI components (screens and widgets).
+- Uses **BLoC (Business Logic Component)** for state management.
+
+### 2. Domain Layer
+- Contains business logic and abstract interfaces, including:
+  - Use cases
+  - Entities
+  - Repositories
+
+### 3. Data Layer
+- Handles data operations such as API calls and local storage.
+- Converts raw data into domain entities.
+
+<img width="373" alt="Screenshot 2024-12-15 at 03 14 43" src="https://github.com/user-attachments/assets/1c45f2d7-e06e-4104-a552-0930708b1587" />
+
