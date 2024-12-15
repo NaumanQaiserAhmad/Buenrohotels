@@ -48,4 +48,11 @@ The app follows the **Clean Architecture** pattern and is divided into three mai
 
 
 
+### Work Yet to Done - Edge cases
+- Show error for internet connections
+- other edge cases
+
+
+
+
 
